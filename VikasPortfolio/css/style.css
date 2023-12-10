@@ -10,7 +10,6 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none; border: none;
-    text-transform: capitalize;
     transition: all .2s linear;
 }
 
@@ -192,6 +191,7 @@ header .navbar ul li a:hover{
 }
 
 .about .row .info h3 span{
+    font-size: 2.5rem;
     color: #eee;
     padding: 0 .5rem;
 }
@@ -318,7 +318,7 @@ header .navbar ul li a:hover{
     background: var(--yellow);
 }
 
-<!-- .skill .box-container{
+.skill .box-container{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -331,20 +331,37 @@ header .navbar ul li a:hover{
     margin: 4rem 1rem;
     padding-left: 4rem;
     border-left: .2rem solid #fff;
+    padding-bottom: 10px;
+    
 }
 
 
 .skill .box-container .box h3{
-    font-size: 2rem;
+    font-size: 4rem;
     color: var(--yellow);
     padding-top: 2.5rem;
 }
 
 .skill .box-container .box p{
-    font-size: 1.4rem;
-    color: #eee;
+    font-size: 1.8rem;
+    color: #eee; 
     padding-top: 1rem 0;
-} -->
+} 
+
+.skill .box-container .box i{
+    position: absolute;
+    top: -1.5rem; left:-2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--yellow);
+}
+
+ 
 
 
 
@@ -389,7 +406,6 @@ header .navbar ul li a:hover{
 }
 
 .contact .row .content .title{
-    text-transform: uppercase;
     color: #fff;
     font-size: 3rem;
     padding-bottom: 2rem;
