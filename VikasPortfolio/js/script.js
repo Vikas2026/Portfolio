@@ -38,4 +38,50 @@ $('a[href*="#"]').on('click',function(e){
             window.open(shareableLink, '_blank');
         }
 
+
+        function validateAndSend() {
+            var form = document.getElementById("contactForm");
+
+            // Check if the form is valid
+            if (form.checkValidity()) {
+                // If valid, send the email
+                sendEmail();
+            } else {
+                // If not valid, show an error message or take other actions
+                alert("Please fill out all required fields.");
+            }
+        }
+
+        
+        function sendEmail() {
+            emailjs.send("service_gezw3dj", "template_g10yigm", {
+                name: document.getElementById("contactForm").elements["name"].value,
+                email: document.getElementById("contactForm").elements["email"].value,
+                project: document.getElementById("contactForm").elements["project"].value,
+                message: document.getElementById("contactForm").elements["message"].value
+            },"5ky9a7WDOs120HTtD")
+            .then(function(response) {
+                console.log("Email sent successfully", response);
+                showAnimatedPopup();
+            }, function(error) {
+                console.error("Error sending email", error);
+            });
+        }
+
+
+        function showAnimatedPopup() {
+            // Create a div element for the popup
+            var popup = document.createElement("div");
+            popup.innerHTML = "Email sent successfully!";
+            popup.className = "animated fadeInDown popup";
+    
+            // Append the popup to the body
+            document.body.appendChild(popup);
+    
+            // Remove the popup after a delay (adjust as needed)
+            setTimeout(function() {
+                document.body.removeChild(popup);
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+
        

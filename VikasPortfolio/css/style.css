@@ -431,6 +431,22 @@ header .navbar ul li a:hover{
     z-index: 100;
     display: none;
 }
+
+
+.popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+    font-size: large;
+}
+
+
 @media (max-width:1200px){
 
     html{
